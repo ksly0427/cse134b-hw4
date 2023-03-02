@@ -16,7 +16,7 @@
 /* Small Devices */
 @media only screen and (max-width: 767px) {
     #logo {
-        fill:#808967;
+        fill:var(--basic-color);
         padding-left: 40px;
     }
 
@@ -103,7 +103,7 @@
         align-items: flex-end;
         gap: 25px;
         list-style: none;
-        margin-right: 40px;
+        margin-right: 20px;
         padding-left: 30vw;
         transition: transform 0.5s ease-in-out;
 
@@ -599,6 +599,7 @@ b {
 
 #contact form textarea {
     font-family: var(--basic-font-family), serif;
+    resize: none;
 }
 
 #contact form input {
