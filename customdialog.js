@@ -38,6 +38,7 @@ export function showDialog(message, confirm, cancel, text) {
         confirmBtn.addEventListener('click', (event) => {
             event.preventDefault();
             dialog.close();
+            document.body.removeChild(dialog);
             if(!text) {
                 resolve(true);
             }
@@ -54,6 +55,7 @@ export function showDialog(message, confirm, cancel, text) {
         cancelBtn.addEventListener('click', (event) => {
             event.preventDefault();
             dialog.close();
+            document.body.removeChild(dialog);
             resolve(false);
         });
         dialog.showModal();
