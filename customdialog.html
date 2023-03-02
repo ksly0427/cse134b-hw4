@@ -29,11 +29,13 @@
             });
 
             confirmButton.addEventListener('click', async () => {
+                output.innerHTML = '';
                 const result = await showDialog("Do you want to confirm this?", true, true, false);
                 output.textContent = `Confirm result : ${result}`;
             });
 
             promptButton.addEventListener('click', async () => {
+                output.innerHTML = '';
                 const result = await showDialog("What is your name?", true, true, true);
                 if(result != false) {
                     output.innerHTML = `Prompt result : ${result}`;
